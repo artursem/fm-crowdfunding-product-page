@@ -5,6 +5,7 @@ $dark: hsl(176, 72%, 28%);
 $black: hsl(0, 0%, 10%);
 $gray: hsl(0, 0%, 48%);
 $mid: hsl(0, 0%, 95%);
+$mid-div: hsl(0, 0%, 70%);
 $light: hsl(0, 0%, 98%);
 $shadow: 0 0 1rem 0 rgba(0,0,0,0.1);
 
@@ -20,7 +21,7 @@ $shadow: 0 0 1rem 0 rgba(0,0,0,0.1);
 }
 // ######################################
 header, main, nav, div, section {
-    border: 1px dashed orangered;
+    // border: 1px dashed orangered;
 }
 // ######################################
 
@@ -87,7 +88,7 @@ body {
 
     section {
         background: white;
-        padding: 1rem;
+        padding: 1rem 2rem;
         margin-bottom: 1.5rem;
         border: 1px solid $mid;
         border-radius: 10px;
@@ -95,8 +96,23 @@ body {
         flex-direction: column;
 
         box-shadow: $shadow;
+        h1, h2, p {
+            padding: .5rem 0 1rem 0;
+        }
+        h1 {
+            font-size: 1.6rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+        }
+        p {
+            color: $gray;
+            font-size: .9rem;
+            line-height: 1.5rem;
+        }
     }
 
+    
     &__product {
         margin-top: -3rem;
         text-align: center;
@@ -106,24 +122,63 @@ body {
             height: auto;
             margin-top: -40px;
         }
-        h1 {
-            padding: 1rem;
-            font-size: 1.6rem;
-        }
-        p {
-            color: $gray;
-            font-size: 1rem;
-        }
         &__buttons {
-            padding: 2rem;
-            width: 90%;
+            width: 100%;
+            margin: 1.5rem;
             display: flex;
             justify-content: space-between;
         }
     }
+    
+    .main__progress { // WTF?!
+        &__figures {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            &__figure {
+                width: 100%;
 
-    &__progress {
-        
+                h1 {
+                    color: $black;
+                    font-size: 1.7rem;
+                    padding-bottom: .3rem;
+                }
+                color: $gray;
+                font-size: .9rem;
+                font-weight: 500;
+            }
+            &__divider {
+                background-color: $mid-div;
+                width: 1px;
+                margin: 0 3rem 0 3rem;
+            }
+        }
+        &__bar {
+            // border: 1px solid red;
+            height: 12px;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            flex-direction: row;
+            .done {
+                border-radius: 6px;
+                flex: 3;
+                background-color: $cyan;
+                z-index: 1;
+            }
+            .not-done {
+                border-radius: 6px;
+                flex: 1;
+                background-color: $mid;
+                margin-left: -10px;
+            }
+        }
+    }
+    
+    &__about {
+        &__option {
+            border: 1px solid yellow;
+        }
     }
 }
 
