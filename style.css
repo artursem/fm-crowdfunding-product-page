@@ -236,7 +236,7 @@ body {
 .modal {
   z-index: 3;
   position: absolute;
-  margin: 7rem;
+  margin: 3rem 7rem;
   max-width: 1200px;
   background: white;
   padding: 1rem 2rem;
