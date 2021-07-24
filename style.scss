@@ -7,7 +7,7 @@ $gray: hsl(0, 0%, 48%);
 $mid-div: hsl(0, 0%, 70%);
 $mid: hsl(0, 0%, 95%);
 $light: hsl(0, 0%, 98%);
-$shadow: 0 0 1rem 0 rgba(0,0,0,0.1);
+$shadow: 0 0 2rem 0 rgba(0,0,0,0.1);
 
 :root {
     font-family: 'Commissioner', sans-serif;
@@ -67,6 +67,7 @@ body {
     color: white;
     font-weight: 600;
     padding: 1rem 2rem 1rem 2rem;
+    height: 56px;
     background-color: $cyan;
     border: none;
     border-radius: 2rem;
@@ -78,6 +79,57 @@ body {
 }
 
 // BOOKMARK!
+
+.btn-bookmark {
+    font-weight: 600;
+    padding: 1rem 0 1rem 0;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-icon {
+        z-index: 1;
+        position: relative;
+        top: -3px;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        img {
+            filter: sepia(100%) hue-rotate(130deg) brightness(210%)saturate(500%);
+        }
+
+    }
+    &-text {
+        margin: 0 1rem;
+    }
+}
+
+.btn-on {
+    color: $dark;
+    background-color: $mid;
+}
+
+.btn-on:hover {
+    color: $cyan;
+    background-color: $mid;
+}
+.btn-off {
+    color: $gray;
+    background-color: $mid;
+    img {
+        filter: invert(100%);
+    }
+}
+.btn-off:hover {
+    color: white;
+    background-color: $gray;
+}
+
 
 .main {
     padding: 0 7rem 7rem 7rem;
@@ -180,12 +232,13 @@ body {
     &__about {
         &__option {
             padding: 1rem 2rem;
-            margin: 1.5rem 0;
+            margin: 1rem 0;
             border: 1px solid $mid;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
             align-items: stretch;
+            box-shadow: $shadow;
             &__top, &__bottom {
                 // border: 1px solid green;
                 width: 100%;
@@ -209,6 +262,7 @@ body {
     }
     .disabled {
         opacity: 0.5;
+        box-shadow: none;
         button {
             background-color: $gray;
         }

@@ -45,6 +45,7 @@ body {
   color: white;
   font-weight: 600;
   padding: 1rem 2rem 1rem 2rem;
+  height: 56px;
   background-color: #3cb4ac;
   border: none;
   border-radius: 2rem;
@@ -53,6 +54,55 @@ body {
 
 .btn:hover, .btn:active {
   background-color: #147b74;
+}
+
+.btn-bookmark {
+  font-weight: 600;
+  padding: 1rem 0 1rem 0;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-bookmark-icon {
+  z-index: 1;
+  position: relative;
+  top: -3px;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+}
+.btn-bookmark-icon img {
+  filter: sepia(100%) hue-rotate(130deg) brightness(210%) saturate(500%);
+}
+.btn-bookmark-text {
+  margin: 0 1rem;
+}
+
+.btn-on {
+  color: #147b74;
+  background-color: #f2f2f2;
+}
+
+.btn-on:hover {
+  color: #3cb4ac;
+  background-color: #f2f2f2;
+}
+
+.btn-off {
+  color: #7a7a7a;
+  background-color: #f2f2f2;
+}
+.btn-off img {
+  filter: invert(100%);
+}
+
+.btn-off:hover {
+  color: white;
+  background-color: #7a7a7a;
 }
 
 .main {
@@ -73,7 +123,7 @@ body {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
 }
 .main section h1, .main section h2, .main section p {
   padding: 0.5rem 0 1rem 0;
@@ -146,12 +196,13 @@ body {
 }
 .main__about__option {
   padding: 1rem 2rem;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   border: 1px solid #f2f2f2;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
 }
 .main__about__option__top, .main__about__option__bottom {
   width: 100%;
@@ -173,6 +224,7 @@ body {
 }
 .main .disabled {
   opacity: 0.5;
+  box-shadow: none;
 }
 .main .disabled button {
   background-color: #7a7a7a;
