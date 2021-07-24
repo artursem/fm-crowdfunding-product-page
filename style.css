@@ -44,15 +44,18 @@ body {
   color: #f2f2f2;
 }
 
-.btn {
-  color: white;
+.btn, .btn-bookmark {
   font-weight: 600;
-  padding: 1rem 2rem 1rem 2rem;
   height: 56px;
-  background-color: #3cb4ac;
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+}
+
+.btn {
+  padding: 1rem 2rem 1rem 2rem;
+  background-color: #3cb4ac;
+  color: white;
 }
 
 .btn:hover, .btn:active {
@@ -60,11 +63,7 @@ body {
 }
 
 .btn-bookmark {
-  font-weight: 600;
   padding: 1rem 0 1rem 0;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -225,15 +224,76 @@ body {
 .main__about__option p {
   margin: 2rem 0;
 }
-.main .disabled {
+
+.disabled {
   opacity: 0.5;
   box-shadow: none;
 }
-.main .disabled button {
+.disabled button {
   background-color: #7a7a7a;
 }
 
 .modal {
+  z-index: 3;
+  position: absolute;
+  margin: 7rem;
+  max-width: 1200px;
+  background: white;
+  padding: 1rem 2rem;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+}
+.modal h1, .modal h2, .modal p {
+  padding: 0.5rem 0 1rem 0;
+}
+.modal h1 {
+  font-size: 1.6rem;
+}
+.modal h2 {
+  font-size: 1.4rem;
+}
+.modal p {
+  color: #7a7a7a;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+.modal__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal__option {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close img {
+  width: 15px;
+  height: 15px;
+}
+
+.background {
+  position: fixed;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.hide {
   display: none;
 }
 
