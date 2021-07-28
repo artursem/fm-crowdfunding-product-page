@@ -241,6 +241,9 @@ body .modal-on {
 .disabled button {
   background-color: #7a7a7a;
 }
+.disabled button:hover {
+  background-color: #7a7a7a;
+}
 
 .modal {
   z-index: 3;
@@ -335,6 +338,27 @@ body .modal-on {
 }
 .modal__option__rollout input:focus-within {
   border: 1px solid #3cb4ac;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: calc(50vw - 400px);
+  width: 600px;
+  padding: 3rem;
+}
+.success h2 {
+  margin: 1rem 0 0 0;
+}
+.success p {
+  margin: 1rem;
+}
+.success img {
+  width: 120px;
+  margin: 1rem;
 }
 
 .modal-close img {

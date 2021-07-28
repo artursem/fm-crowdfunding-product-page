@@ -1,8 +1,9 @@
-const btn = document.querySelectorAll('.btn');
+const btnOpen = document.querySelectorAll('.open-modal');
+const btnSelect = document.querySelectorAll('.select-plan');
 const modalSelect = document.querySelector('.back');
 const modalSuccess = document.querySelector('.success');
 const background = document.querySelector('.background');
-const btnX = document.querySelector('.modal-close');
+const btnX = document.querySelectorAll('.modal-close');
 const body = document.querySelector('body');
 const rewardSections = document.querySelectorAll('.enabled');
 const rewardOptions = document.querySelectorAll('.select-reward');
@@ -11,7 +12,6 @@ const rollouts = document.querySelectorAll('.modal__option__rollout');
 rewardOptions[rewardOptions.length-1].disabled = true;
 
 function showSelect() {
-    console.log('modal select');
     background.classList.remove('hide');
     modalSelect.classList.remove('hide');
     body.classList.add('modal-on');
@@ -19,7 +19,10 @@ function showSelect() {
 }
 
 function showSuccess() {
-    console.log('modal success');
+    background.classList.remove('hide');
+    modalSuccess.classList.remove('hide');
+    body.classList.add('modal-on');
+    body.style.overflowY = 'hidden';
 }
 
 function hideModal() {
@@ -42,9 +45,20 @@ function chooseOption(option) {
 
 
 
-btn.forEach(btn => btn.addEventListener('click', showSelect));
-btnX.addEventListener('click', hideModal);
+btnOpen.forEach(btn => btn.addEventListener('click', showSelect));
+btnX.forEach(btn => btn.addEventListener('click', hideModal));
 background.addEventListener('click', hideModal);
 rewardSections.forEach(option => option.addEventListener('click', function() {
     return chooseOption(this);
 }));
+
+
+btnSelect.forEach(btn => btn.addEventListener('click', () => {
+    // console.log('clicked');
+    // ######################################################
+    // DRY
+    // show / hideBackground()
+    // body - showModal = true / separate function
+    hideModal();
+    showSuccess();
+}))
