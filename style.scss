@@ -31,7 +31,11 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    
+    .modal-on {
+        position: fixed;
+        max-height: 100vh;
+        overflow-y: hidden;
+    }
 }
 
 .header {
@@ -274,7 +278,7 @@ body {
 
 .modal {
     z-index: 3;
-    position: absolute;
+    position: fixed;
     
     margin: 3rem 7rem;
     max-width: 1200px;
@@ -336,6 +340,7 @@ body {
     height: 100vh;
     background-color: black;
     opacity: 0.5;
+    overflow-y: hidden;
 }
 
 .hide {
