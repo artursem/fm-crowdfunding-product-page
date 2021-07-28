@@ -267,6 +267,9 @@ body {
         }
     }
 }
+.selected {
+    border-color: $cyan !important;
+}
 
 .disabled {
     opacity: 0.5;

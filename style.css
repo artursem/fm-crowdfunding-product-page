@@ -230,6 +230,10 @@ body .modal-on {
   margin: 2rem 0;
 }
 
+.selected {
+  border-color: #3cb4ac !important;
+}
+
 .disabled {
   opacity: 0.5;
   box-shadow: none;
