@@ -6,6 +6,7 @@ const btnX = document.querySelector('.modal-close');
 const body = document.querySelector('body');
 const rewardSections = document.querySelectorAll('.enabled');
 const rewardOptions = document.querySelectorAll('.select-reward');
+const rollouts = document.querySelectorAll('.modal__option__rollout');
 
 rewardOptions[rewardOptions.length-1].disabled = true;
 
@@ -31,9 +32,11 @@ function hideModal() {
 
 function chooseOption(option) {
     rewardSections.forEach(section => section.classList.remove('selected'));
+    rollouts.forEach(rollout => rollout.classList.add('hide'));
     option.querySelector('input').checked = true;
     if (option.querySelector('input').checked === true) {
         option.classList.add('selected');
+        option.querySelector('.modal__option__rollout').classList.remove('hide');
     }
 }
 
