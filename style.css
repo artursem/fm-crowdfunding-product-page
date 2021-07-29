@@ -248,8 +248,11 @@ body .modal-on {
 .modal {
   z-index: 3;
   position: fixed;
-  margin: 3rem 7rem;
-  max-width: 1200px;
+  left: 50%;
+  top: 50%;
+  margin-left: -450px;
+  margin-top: -450px;
+  width: 900px;
   background: white;
   padding: 1rem 2rem;
   border: 1px solid #f2f2f2;
@@ -341,14 +344,16 @@ body .modal-on {
 }
 
 .success {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -300px;
+  margin-top: -300px;
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  left: calc(50vw - 400px);
-  width: 600px;
-  padding: 3rem;
 }
 .success h2 {
   margin: 1rem 0 0 0;
@@ -359,6 +364,9 @@ body .modal-on {
 .success img {
   width: 120px;
   margin: 1rem;
+}
+.success .btn {
+  margin-bottom: 1.5rem;
 }
 
 .modal-close img {
