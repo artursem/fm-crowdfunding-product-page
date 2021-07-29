@@ -15,14 +15,12 @@ function showSelect() {
     background.classList.remove('hide');
     modalSelect.classList.remove('hide');
     body.classList.add('modal-on');
-    body.style.overflowY = 'hidden';
 }
 
 function showSuccess() {
     background.classList.remove('hide');
     modalSuccess.classList.remove('hide');
     body.classList.add('modal-on');
-    body.style.overflowY = 'hidden';
 }
 
 function hideModal() {
@@ -30,7 +28,6 @@ function hideModal() {
     modalSuccess.classList.add('hide');
     background.classList.add('hide');
     body.classList.remove('modal-on');
-    body.style.overflowY = 'auto';
 }
 
 function chooseOption(option) {

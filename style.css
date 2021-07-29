@@ -17,10 +17,11 @@ body {
   justify-content: flex-start;
   align-items: stretch;
 }
-body .modal-on {
+
+.modal-on {
   position: fixed;
   max-height: 100vh;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .header {
@@ -249,9 +250,8 @@ body .modal-on {
   z-index: 3;
   position: fixed;
   left: 50%;
-  top: 50%;
+  top: 2rem;
   margin-left: -450px;
-  margin-top: -450px;
   width: 900px;
   background: white;
   padding: 1rem 2rem;

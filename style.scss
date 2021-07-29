@@ -31,11 +31,11 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: stretch;
-    .modal-on {
-        position: fixed;
-        max-height: 100vh;
-        overflow-y: hidden;
-    }
+}
+.modal-on {
+    position: fixed;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 .header {
@@ -286,9 +286,9 @@ body {
     z-index: 3;
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 2rem;
     margin-left: -450px;
-    margin-top: -450px;
+
 
     width: 900px;
 
