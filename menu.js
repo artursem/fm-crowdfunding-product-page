@@ -30,4 +30,8 @@ function menuClick() {
 
 btn.addEventListener('click', menuClick);
 background.addEventListener('click', hideMenu);
-menu.addEventListener('click', hideMenu);
+menu.addEventListener('click', () => {
+    if(window.innerWidth < 999) {
+        hideMenu();
+    }
+});

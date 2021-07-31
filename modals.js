@@ -51,11 +51,6 @@ rewardSections.forEach(option => option.addEventListener('click', function() {
 
 
 btnSelect.forEach(btn => btn.addEventListener('click', () => {
-    // console.log('clicked');
-    // ######################################################
-    // DRY
-    // show / hideBackground()
-    // body - showModal = true / separate function
     hideModal();
     showSuccess();
 }))

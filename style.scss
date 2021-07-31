@@ -406,6 +406,9 @@ body {
         }
     }
 }
+
+//  ###################################################################
+
 .success {
     position: fixed;
     left: 50%;
@@ -473,7 +476,7 @@ body {
     
         height: 40vh;
         padding: 2rem 5rem;
-        background: $gray url('./images/image-hero-desktop.jpg') no-repeat;
+        background: $gray url('./images/image-hero-mobile.jpg') no-repeat;
         background-size: cover;
     
         &__nav {
@@ -493,7 +496,7 @@ body {
             }
             ul {
                 position: absolute;
-                left: calc(50vw - 100px);
+                left: calc(50vw - 150px);
                 z-index: 3;
                 width: 300px;
                 max-zoom: 200px;
@@ -541,5 +544,134 @@ body {
             }
         }
     }
+    .btn-bookmark-text {
+        display: none;
+    }
+    .btn-bookmark:hover {
+        background: none;
+    }
+    .btn:hover, .btn:active {
+        background-color: none;
+    }
 
+.main {
+    padding: 1rem;
+
+    &__about__option__bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        div {
+            margin-top: -2rem;
+            margin-bottom: 1rem;
+        }
+        button {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+    // mobile modal styling!!!! ################################
+
+    .modal {
+        z-index: 3;
+        position: fixed;
+        left: 5vw;
+        top: 1rem;
+        width: 90vw;    
+        margin: 0;        
+    
+    //     &__top {
+    //         display: flex;
+    //         flex-direction: row;
+    //         justify-content: space-between;
+    //         align-items: center;
+    //     }
+    //     &__option {
+    //         width: 100%;
+    //         max-width: 1200px;
+    //         background: white;
+    //         margin-bottom: 1.5rem;
+    //         border: 1px solid $mid;
+    //         border-radius: 10px;
+    //         display: flex;
+    //         flex-direction: column;
+    //         &__top {
+    //             display: flex;
+    //             flex-direction: row;
+    //             justify-content: space-between;
+    //             align-items: center;
+    //             margin-right: 2rem;
+    //             input { 
+    //                 width: 0;
+    //                 height: 0;
+    
+    //             }
+    //             input:checked + .select-reward-check {
+    //                 background: radial-gradient(circle at 50%, $cyan 40%, white 40%);
+    //             }
+    //             .select-reward-check {
+    //                 display: inline-block;
+    //                 border: 1px solid $mid-div;
+    //                 border-radius: 50%;
+    //                 width: 16px;
+    //                 height: 16px;
+    
+    //                 margin: 1rem 0.9rem;
+    //                 transform: translateY(.1rem);
+    //                 background-color: none;
+    //             }
+    //             label {
+    //                 display: flex;
+    //                 flex-direction: row;
+    //                 justify-items: start;
+    //                 align-items: center;
+    //                 font-weight: 700;
+    //                 b {
+    //                     margin-left: 1rem;
+    //                     color: $cyan;
+    //                 }
+    //             }
+    //         }
+    //         p {
+    //             padding: 1rem 2rem 1rem 3.2rem ;
+    //         }
+    //         &__rollout {
+    //             border-top: 1px solid $mid-div;
+    //             margin-top: 1rem;
+    //             padding: 1rem;
+    //             display: flex;
+    //             flex-direction: row;
+    //             justify-content: space-between;
+    //             align-items: center;
+    //             color: $gray;
+    //             .dollar {
+    //                 position: relative;
+    //                 left: 3rem;
+    //                 font-weight: 700;
+    //             }
+    //             input {
+    //                 border: 1px solid $mid-div;
+    //                 border-radius: 2rem;
+    
+    //                 height: 56px;
+    //                 width: 120px;
+    //                 padding: 1rem 2rem 1rem 2rem;
+    //                 margin: 0 1rem 0 1rem;
+    //                 outline: none;
+                    
+    //                 font-weight: 700;
+    //                 color: $black;
+    //             }
+    
+    //             input:focus-within {
+    //                 border: 1px solid $cyan;
+    //             }
+    //         }
+    //     }
+     }
+     .hide {
+        display: none;
+    }
 }
