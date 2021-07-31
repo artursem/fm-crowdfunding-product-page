@@ -300,10 +300,27 @@ body {
   margin-right: 2rem;
 }
 .modal__option__top input {
-  margin: 1rem 0.5rem 1rem 2rem;
-  color: #3cb4ac;
+  width: 0;
+  height: 0;
+}
+.modal__option__top input:checked + .select-reward-check {
+  background: radial-gradient(circle at 50%, #3cb4ac 40%, white 40%);
+}
+.modal__option__top .select-reward-check {
+  display: inline-block;
+  border: 1px solid #b3b3b3;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  margin: 1rem 0.9rem;
+  transform: translateY(0.1rem);
+  background-color: none;
 }
 .modal__option__top label {
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
   font-weight: 700;
 }
 .modal__option__top label b {
