@@ -21,7 +21,6 @@ body {
 .modal-on {
   position: fixed;
   max-height: 100vh;
-  overflow-y: auto;
 }
 
 .header {
@@ -386,9 +385,15 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.modal-close img {
+.modal-close svg {
   width: 15px;
   height: 15px;
+  fill: #1a1a1a;
+  stroke: #1a1a1a;
+}
+
+.modal-close svg:hover {
+  filter: opacity(50%);
 }
 
 .background {

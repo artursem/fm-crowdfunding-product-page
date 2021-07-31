@@ -35,7 +35,7 @@ body {
 .modal-on {
     position: fixed;
     max-height: 100vh;
-    overflow-y: auto;
+    // overflow-y: auto;
 }
 
 .header {
@@ -290,10 +290,7 @@ body {
     margin-left: -450px;
 
 
-    width: 900px;
-
-    // styl jak success modal!
-     
+    width: 900px;     
     background: white;
     padding: 1rem 2rem;
     border: 1px solid $mid;
@@ -327,7 +324,6 @@ body {
         width: 100%;
         max-width: 1200px;
         background: white;
-        // padding: 1rem 2rem;
         margin-bottom: 1.5rem;
         border: 1px solid $mid;
         border-radius: 10px;
@@ -438,15 +434,17 @@ body {
     }
 }
 
-
-.modal-close img{
+.modal-close svg{
     width: 15px;
     height: 15px;
+    fill: $black;
+    stroke: $black;
 }
-// ################ FIX THIS ################
-// .modal-close:hover img{
-//     filter: sepia(100%) hue-rotate(130deg) brightness(210%) saturate(500%);
-// }
+.modal-close svg:hover {
+    // fill: pink;
+    filter: opacity(50%);
+}
+
 
 .background {
     position: fixed;
