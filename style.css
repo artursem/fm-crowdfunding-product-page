@@ -16,11 +16,11 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
+  overflow: auto;
 }
 
 .modal-on {
   position: fixed;
-  max-height: 100vh;
 }
 
 .header {
@@ -513,11 +513,16 @@ body {
 
   .modal {
     z-index: 3;
-    position: fixed;
+    position: absolute;
     left: 5vw;
     top: 1rem;
     width: 90vw;
     margin: 0;
+  }
+  .modal .back-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
   }
   .modal__option__rollout {
     flex-direction: column;
