@@ -406,7 +406,6 @@ body {
   height: 100vh;
   background-color: black;
   opacity: 0.5;
-  overflow-y: hidden;
 }
 
 .hide {
@@ -519,6 +518,12 @@ body {
     top: 1rem;
     width: 90vw;
     margin: 0;
+  }
+  .modal__option__rollout {
+    flex-direction: column;
+  }
+  .modal__option__rollout div {
+    margin: 1rem;
   }
 
   .hide {
